@@ -45,7 +45,7 @@
                   <ListView fx:id="listViewDestinos" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="130.0" prefWidth="520.0" styleClass="contenedor-list-view" />
                   <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="50.0" prefWidth="520.0">
                      <children>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#guardarDestino" prefHeight="36.0" prefWidth="150.0" styleClass="btn-guardar" text="Cargar desde archivo" />
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#cargarDestinos" prefHeight="36.0" prefWidth="150.0" styleClass="btn-guardar" text="Cargar desde archivo" />
                      </children>
                      <VBox.margin>
                         <Insets />

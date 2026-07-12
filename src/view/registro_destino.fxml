@@ -19,14 +19,9 @@
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
-          <Menu mnemonicParsing="false" text="File">
+          <Menu mnemonicParsing="false" text="Archivo">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
+              <MenuItem mnemonicParsing="false" onAction="#abrirConsultaDestinos" text="Consultar destinos" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
@@ -42,7 +37,7 @@
          <children>
             <HBox alignment="CENTER" prefHeight="39.0" prefWidth="520.0" spacing="18.0">
                <children>
-                  <HBox alignment="TOP_CENTER" prefHeight="64.0" prefWidth="64.0" styleClass="contenedor-imagen">
+                  <HBox alignment="CENTER" prefHeight="64.0" prefWidth="64.0" styleClass="contenedor-imagen">
                      <children>
                         <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                            <image>

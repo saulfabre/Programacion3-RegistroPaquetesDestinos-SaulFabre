@@ -9,6 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import model.Destino;
 import utils.ArchivoUtil;
+import utils.Navegacion;
 
 public class RegistroDestinoController {
 
@@ -62,5 +63,10 @@ public class RegistroDestinoController {
 
         return new Destino(tfDestino.getText());
     }
-    
+
+    @FXML
+    private void abrirConsultaDestinos() {
+
+        Navegacion.abrirVentana("/view/consulta_destino.fxml", "Destinos guardados");
+    }   
 }
