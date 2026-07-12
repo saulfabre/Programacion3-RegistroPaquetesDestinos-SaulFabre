@@ -85,4 +85,10 @@ public class RegistroDestinoController {
 
         Navegacion.abrirVentana("/view/registro_paquete.fxml", "Registro de paquetes");
     }
+
+    @FXML
+    private void abrirConsultaPaquetes() {
+
+        Navegacion.abrirVentana("/view/consulta_paquete.fxml", "Consulta de paquetes");
+    }
 }

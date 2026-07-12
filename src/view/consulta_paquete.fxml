@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" stylesheets="@../styles/estilos.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ConsultaDestinoController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" stylesheets="@../styles/estilos.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ConsultaPaqueteController">
    <center>
       <VBox prefHeight="200.0" prefWidth="600.0" spacing="8.0" BorderPane.alignment="CENTER">
          <children>
@@ -22,9 +22,9 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="64.0" prefWidth="64.0" styleClass="contenedor-imagen">
                      <children>
-                        <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Downloads/map-svgrepo-com.png" />
+                              <Image url="@../../../../Downloads/table-list-alt-svgrepo-com.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -43,17 +43,20 @@
                   <Insets />
                </VBox.margin>
             </HBox>
-            <TableView minHeight="-Infinity" prefHeight="225.0" prefWidth="520.0">
+            <TableView fx:id="tablaPaquetes" minHeight="-Infinity" prefHeight="225.0" prefWidth="520.0">
               <columns>
-                <TableColumn prefWidth="130.4000244140625" text="Código" />
-                <TableColumn prefWidth="116.0" text="Destinatario" />
-                  <TableColumn prefWidth="128.0" text="Peso" />
-                  <TableColumn prefWidth="144.0" text="Destino" />
+                <TableColumn fx:id="colCodigo" prefWidth="100.0" resizable="false" text="Código" />
+                <TableColumn fx:id="colDestinatario" prefWidth="100.0" resizable="false" text="Destinatario" />
+                  <TableColumn fx:id="colPeso" prefWidth="100.0" resizable="false" text="Peso" />
+                  <TableColumn fx:id="colDestino" prefWidth="100.0" resizable="false" text="Destino" />
               </columns>
+               <padding>
+                  <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+               </padding>
             </TableView>
             <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="50.0" prefWidth="520.0">
                <children>
-                  <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#cargarDestinos" prefHeight="36.0" prefWidth="150.0" styleClass="btn-guardar" text="Cargar desde archivo" />
+                  <Button fx:id="btnCargarPaquete" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#cargarPaquetes" prefHeight="36.0" prefWidth="150.0" styleClass="btn-guardar" text="Cargar desde archivo" />
                </children>
                <VBox.margin>
                   <Insets />
