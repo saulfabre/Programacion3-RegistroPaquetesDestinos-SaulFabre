@@ -15,13 +15,13 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" stylesheets="@../styles/estilos.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistroDestinoController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" stylesheets="@../styles/estilos.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistroPaqueteController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
           <Menu mnemonicParsing="false" text="Archivo">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#abrirConsultaDestinos" text="Consultar destinos" />
+              <MenuItem mnemonicParsing="false" text="Consultar destinos" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
@@ -62,37 +62,37 @@
                   <HBox alignment="CENTER_LEFT">
                      <children>
                         <Label prefHeight="18.0" prefWidth="132.0" styleClass="label-nombre-destino" text="Código paquete" />
-                        <TextField fx:id="tfDestino111" minHeight="-Infinity" prefHeight="30.0" prefWidth="324.0" promptText="FX001" styleClass="text-field-destino" />
+                        <TextField fx:id="tfCodigoPaquete" minHeight="-Infinity" prefHeight="30.0" prefWidth="324.0" promptText="FX001" styleClass="text-field-destino" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT">
                      <children>
                         <Label prefHeight="18.0" prefWidth="132.0" styleClass="label-nombre-destino" text="Destinatario" />
-                        <TextField fx:id="tfDestino1" minHeight="-Infinity" prefHeight="30.0" prefWidth="324.0" promptText="Pedro Juan" styleClass="text-field-destino" />
+                        <TextField fx:id="tfDestinatario" minHeight="-Infinity" prefHeight="30.0" prefWidth="324.0" promptText="Pedro Juan" styleClass="text-field-destino" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT">
                      <children>
                         <Label prefHeight="18.0" prefWidth="132.0" styleClass="label-nombre-destino" text="Peso del paquete" />
-                        <TextField fx:id="tfDestino11" minHeight="-Infinity" prefHeight="30.0" prefWidth="324.0" promptText="2.2 Kg" styleClass="text-field-destino" />
+                        <TextField fx:id="tfPesoPaquete" minHeight="-Infinity" prefHeight="30.0" prefWidth="324.0" promptText="2.2 Kg" styleClass="text-field-destino" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT">
                      <children>
                         <Label prefHeight="18.0" prefWidth="132.0" styleClass="label-nombre-destino" text="Destino" />
-                        <ComboBox minHeight="-Infinity" prefHeight="30.0" prefWidth="324.0" promptText="Seleccione un destino" styleClass="cb-destinos" />
+                        <ComboBox fx:id="cbDestino" minHeight="-Infinity" prefHeight="30.0" prefWidth="324.0" promptText="Seleccione un destino" styleClass="cb-destinos" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="42.0" prefWidth="436.0" spacing="18.0">
                      <children>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#guardarDestino" prefHeight="36.0" prefWidth="150.0" styleClass="btn-guardar" text="Guardar en archivo" />
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#guardarPaquete" prefHeight="36.0" prefWidth="150.0" styleClass="btn-guardar" text="Guardar en archivo" />
                         <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#cargarDestinos" prefHeight="36.0" prefWidth="160.0" styleClass="btn-cargar" text="Cargar destinos" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefWidth="490.0" styleClass="contenedor-progreso">
                      <children>
                         <Label prefHeight="18.0" prefWidth="70.0" styleClass="label-nombre-destino" text="Progreso" />
-                        <ProgressBar minHeight="-Infinity" prefHeight="30.0" prefWidth="388.0" progress="0.0" />
+                        <ProgressBar fx:id="barraProgreso" minHeight="-Infinity" prefHeight="30.0" prefWidth="388.0" progress="0.0" />
                      </children>
                      <VBox.margin>
                         <Insets />

@@ -24,12 +24,23 @@ public class RegistroDestinoController {
     @FXML
     private void guardarDestino() {
 
+        ObservableList<Destino> destinos = FXCollections.observableArrayList(
+            ArchivoUtil.leerDestinos()
+        );
+
         String destino = tfDestino.getText();
 
         if (destino.isEmpty()) {
 
             lblEstado.setText("Debe ingresar un nombre.");
             return;
+        }
+
+        for (Destino destinoArr : destinos) {
+            if (destino.equals(destinoArr.getNombre())) {
+                lblEstado.setText("El destino ya existe.");
+                return;
+            }
         }
 
         Destino destinoArchivo = crearDestino();
@@ -67,5 +78,11 @@ public class RegistroDestinoController {
     private void abrirConsultaDestinos() {
 
         Navegacion.abrirVentana("/view/consulta_destino.fxml", "Destinos guardados");
-    }   
+    }  
+    
+    @FXML
+    private void abrirRegistroPaquete() {
+
+        Navegacion.abrirVentana("/view/registro_paquete.fxml", "Registro de paquetes");
+    }
 }

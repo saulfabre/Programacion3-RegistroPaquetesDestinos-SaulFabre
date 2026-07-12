@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import model.Destino;
+import model.Paquete;
 
 public class ArchivoUtil {
 
@@ -23,6 +24,21 @@ public class ArchivoUtil {
         } catch(Exception e) {
 
             System.out.println("Error al guardar destino en el archivo " + e.getMessage());
+        }
+    }
+
+    public static void guardarPaquete(Paquete paquete) {
+
+        try {
+
+        FileWriter archivo = new FileWriter("Paquetes.txt", true);
+        archivo.write(paquete.getCodigo() + ";" + paquete.getDestinatario() + ";" + paquete.getPeso() + ";" + paquete.getDestino() + "\n");
+        archivo.close();
+
+        System.out.println("Paquete guardado con exito en el archivo");
+
+        } catch(Exception e) {
+            System.out.println("Error al guardar paquete en el archivo " + e.getMessage());
         }
     }
 
@@ -44,12 +60,42 @@ public class ArchivoUtil {
 
             archivo.close();
             br.close();
-        } catch (Exception e) {
+
+        } catch (IOException e) {
 
             System.out.println("Error al leer el archivo " + e.getMessage());
         }
 
         return destinos;
     }
-   
+
+    public static ArrayList<Paquete> leerPaquetes() {
+
+        ArrayList<Paquete> paquetes = new ArrayList<>();
+
+        try {
+
+        FileReader archivo = new FileReader("Paquetes.txt");
+        BufferedReader br = new BufferedReader(archivo);
+
+        String linea;
+
+        while ((linea = br.readLine()) != null) {
+
+            String[] partes = linea.split(";");
+
+            paquetes.add(new Paquete(partes[0], partes[1], Double.parseDouble(partes[2]), partes[3]));
+        }
+
+        archivo.close();
+        br.close();
+
+    } catch(IOException e) {
+
+        System.out.println("Error al leer el archivo " + e.getMessage());
+    }
+
+    return paquetes;
+
+    }
 }

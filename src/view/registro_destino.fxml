@@ -22,6 +22,7 @@
           <Menu mnemonicParsing="false" text="Archivo">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#abrirConsultaDestinos" text="Consultar destinos" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirRegistroPaquete" text="Registrar paquete" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
