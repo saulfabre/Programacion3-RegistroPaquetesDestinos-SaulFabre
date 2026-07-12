@@ -85,19 +85,11 @@
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
-          <Menu mnemonicParsing="false" text="File">
+          <Menu mnemonicParsing="false" text="Archivo">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem mnemonicParsing="false" onAction="#abrirRegistroPaquete" text="Registrar paquete" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirRegistroDestino" text="Registrar destino" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirConsultaDestinos" text="Consultar destinos" />
             </items>
           </Menu>
         </menus>

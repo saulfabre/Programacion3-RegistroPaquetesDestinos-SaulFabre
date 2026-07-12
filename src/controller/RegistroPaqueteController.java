@@ -11,6 +11,7 @@ import javafx.scene.control.TextField;
 import model.Destino;
 import model.Paquete;
 import utils.ArchivoUtil;
+import utils.Navegacion;
 
 public class RegistroPaqueteController {
 
@@ -111,11 +112,29 @@ public class RegistroPaqueteController {
                 lblEstado.setText("No hay destinos registrados.");
             }
 
-        }    
+        }   
 
     @FXML
     private Paquete crearPaquete() {
 
         return new Paquete(tfCodigoPaquete.getText(), tfDestinatario.getText(), Double.parseDouble(tfPesoPaquete.getText()), cbDestino.getValue().getNombre());
     }  
+
+    @FXML
+    private void abrirConsultaPaquetes() {
+
+        Navegacion.abrirVentana("/view/consulta_paquete.fxml", "Consulta de paquetes");
+    }
+
+    @FXML
+    private void abrirRegistroDestino() {
+
+        Navegacion.abrirVentana("/view/registro_destino.fxml", "Registro de destinos");
+    }
+
+    @FXML
+    private void abrirConsultaDestinos() {
+
+         Navegacion.abrirVentana("/view/consulta_destino.fxml", "Destinos guardados");
+    }
 }

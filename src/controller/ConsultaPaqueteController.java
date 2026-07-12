@@ -10,6 +10,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import model.Paquete;
 import utils.ArchivoUtil;
+import utils.Navegacion;
 
 public class ConsultaPaqueteController {
 
@@ -41,6 +42,8 @@ public class ConsultaPaqueteController {
         colDestinatario.setCellValueFactory(new PropertyValueFactory<>("destinatario"));
         colPeso.setCellValueFactory(new PropertyValueFactory<>("peso"));
         colDestino.setCellValueFactory(new PropertyValueFactory<>("destino"));
+
+        cargarPaquetes();
     }
 
     @FXML
@@ -60,4 +63,23 @@ public class ConsultaPaqueteController {
 
         lblEstado.setText("Paquetes cargados exitosamente");
     }
+
+    @FXML
+    private void abrirRegistroPaquete() {
+
+        Navegacion.abrirVentana("/view/registro_paquete.fxml", "Registro de paquetes");
+    }
+
+    @FXML
+    private void abrirRegistroDestino() {
+
+        Navegacion.abrirVentana("/view/registro_destino.fxml", "Registro de destinos");
+    }
+
+     @FXML
+    private void abrirConsultaDestinos() {
+
+        Navegacion.abrirVentana("/view/consulta_destino.fxml", "Destinos guardados");
+    } 
+
 }

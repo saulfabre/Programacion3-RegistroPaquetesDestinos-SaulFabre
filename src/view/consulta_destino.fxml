@@ -42,7 +42,11 @@
             <VBox alignment="CENTER_LEFT" prefHeight="142.0" prefWidth="520.0" spacing="10.0" styleClass="contenedor-consulta-destinos">
                <children>
                   <Label styleClass="label-destinos-registrados" text="Destinos registrados" />
-                  <ListView fx:id="listViewDestinos" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="130.0" prefWidth="520.0" styleClass="contenedor-list-view" />
+                  <ListView fx:id="listViewDestinos" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="130.0" prefWidth="520.0" styleClass="contenedor-list-view">
+                     <padding>
+                        <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                     </padding>
+                  </ListView>
                   <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="50.0" prefWidth="520.0">
                      <children>
                         <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#cargarDestinos" prefHeight="36.0" prefWidth="150.0" styleClass="btn-guardar" text="Cargar desde archivo" />
@@ -67,7 +71,7 @@
                   <Insets left="12.0" />
                </padding>
                <VBox.margin>
-                  <Insets top="37.0" />
+                  <Insets top="41.0" />
                </VBox.margin>
             </HBox>
          </children>
@@ -82,19 +86,11 @@
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
-          <Menu mnemonicParsing="false" text="File">
+          <Menu mnemonicParsing="false" text="Archivo">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem mnemonicParsing="false" onAction="#abrirRegistroDestino" text="Registrar destino" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirRegistroPaquete" text="Registrar paquete" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirConsultaPaquetes" text="Consultar paquetes" />
             </items>
           </Menu>
         </menus>

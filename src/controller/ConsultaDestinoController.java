@@ -7,6 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import model.Destino;
 import utils.ArchivoUtil;
+import utils.Navegacion;
 
 public class ConsultaDestinoController {
 
@@ -15,6 +16,11 @@ public class ConsultaDestinoController {
 
     @FXML
     private ListView<Destino> listViewDestinos;
+
+    @FXML
+    public void initialize() {
+        cargarDestinos();
+    }
 
     @FXML
     private void cargarDestinos() {
@@ -33,4 +39,24 @@ public class ConsultaDestinoController {
         
         lblEstado.setText("Destinos cargados exitosamente.");
     }   
+
+    @FXML
+    private void abrirRegistroDestino() {
+
+        Navegacion.abrirVentana("/view/registro_destino.fxml", "Registro de destinos");
+    }
+
+    @FXML
+    private void abrirRegistroPaquete() {
+
+        Navegacion.abrirVentana("/view/registro_paquete.fxml", "Registro de paquetes");
+    }
+
+    @FXML
+    private void abrirConsultaPaquetes() {
+
+        Navegacion.abrirVentana("/view/consulta_paquete.fxml", "Consulta de paquetes");
+    }
+
+    
 }
