@@ -21,6 +21,7 @@
 
     -fx-background-color: white;
     -fx-background-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 5, 0.2, 0, 2);
 }
 
 .btn-guardar {
@@ -49,8 +50,11 @@
 
 .contenedor-estado {
 
-    -fx-background-color: white;
+    -fx-background-color: rgba(255, 255, 255, 0.1);
     -fx-background-radius: 4;
+    -fx-border-color: gray;
+    -fx-border-radius: 4;
+    -fx-border-width: 0.2;
 }
 
 .text-field-destino {
@@ -60,9 +64,14 @@
 
 .contenedor-list-view {
 
-    -fx-border-color: #00000042;
-    -fx-border-radius: 4;
+    -fx-border-color: white;
+    -fx-border-radius: 12;
     -fx-background-color: white;
-    -fx-background-radius: 4;
-    -fx-border-widht: 1;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 5, 0.2, 0, 2);
+}
+
+.contenedor-list-view .list-cell:filled:selected {
+
+    -fx-background-color: #ffb84d;
 }
