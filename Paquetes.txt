@@ -1,0 +1,5 @@
+FX001;Saul Fabre;2.2;Tenares
+FX002;Pedrin Jose;5.5;Salcedo
+FX003;Juan Jose;9.0;Puerto Plata
+FX004;Maria Altagracia;1.1;Macoris
+FX005;Maria Altagracia;1.3;Santo Domingo
