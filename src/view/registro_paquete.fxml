@@ -1,6 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" />
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" stylesheets="@../styles/estilos.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistroDestinoController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#abrirConsultaDestinos" text="Consultar destinos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="618.0" spacing="8.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="39.0" prefWidth="520.0" spacing="18.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="64.0" prefWidth="64.0" styleClass="contenedor-imagen">
+                     <children>
+                        <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/box-svgrepo-com.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="50.0" prefWidth="309.0" spacing="4.0">
+                     <children>
+                        <Label alignment="CENTER" styleClass="titulo-principal" text="Registro de Paquetes" />
+                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="321.0" styleClass="sub-titulo" text="Registra los paquetes y guardálos en el archivo." />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </padding>
+            </HBox>
+            <VBox prefHeight="90.0" prefWidth="532.0" spacing="16.0" styleClass="contenedor-formulario">
+               <children>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="132.0" styleClass="label-nombre-destino" text="Código paquete" />
+                        <TextField fx:id="tfDestino111" minHeight="-Infinity" prefHeight="30.0" prefWidth="324.0" promptText="FX001" styleClass="text-field-destino" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="132.0" styleClass="label-nombre-destino" text="Destinatario" />
+                        <TextField fx:id="tfDestino1" minHeight="-Infinity" prefHeight="30.0" prefWidth="324.0" promptText="Pedro Juan" styleClass="text-field-destino" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="132.0" styleClass="label-nombre-destino" text="Peso del paquete" />
+                        <TextField fx:id="tfDestino11" minHeight="-Infinity" prefHeight="30.0" prefWidth="324.0" promptText="2.2 Kg" styleClass="text-field-destino" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="132.0" styleClass="label-nombre-destino" text="Destino" />
+                        <ComboBox minHeight="-Infinity" prefHeight="30.0" prefWidth="324.0" promptText="Seleccione un destino" styleClass="cb-destinos" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="42.0" prefWidth="436.0" spacing="18.0">
+                     <children>
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#guardarDestino" prefHeight="36.0" prefWidth="150.0" styleClass="btn-guardar" text="Guardar en archivo" />
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#cargarDestinos" prefHeight="36.0" prefWidth="160.0" styleClass="btn-cargar" text="Cargar destinos" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefWidth="490.0" styleClass="contenedor-progreso">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="70.0" styleClass="label-nombre-destino" text="Progreso" />
+                        <ProgressBar minHeight="-Infinity" prefHeight="30.0" prefWidth="388.0" progress="0.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="18.0" left="24.0" right="24.0" top="18.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </VBox>
+            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="38.0" prefWidth="520.0" styleClass="contenedor-estado">
+               <children>
+                  <Label fx:id="lblEstado" text="Esperando información..." />
+               </children>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="8.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="25.0" left="40.0" right="40.0" top="22.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>

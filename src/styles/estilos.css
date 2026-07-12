@@ -84,8 +84,23 @@
 
 .label-destinos-registrados {
 
-    fx-font-family: "Segoe UI";
+    -fx-font-family: "Segoe UI";
     -fx-font-size: 14px;
     -fx-font-weight: bold;
     -fx-text-fill: #ffb84d;
+}
+
+.cb-destinos {
+
+    -fx-background-color: white;
+    -fx-border-color: rgb(227, 227, 227);
+    -fx-border-radius: 4;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+}
+
+.progress-bar {
+
+    -fx-accent: #ffb84d;
+    -fx-background-radius: 6;
 }
