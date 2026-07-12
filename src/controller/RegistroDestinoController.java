@@ -6,7 +6,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import model.Destino;
 import utils.ArchivoUtil;
 import utils.Navegacion;
@@ -14,13 +13,13 @@ import utils.Navegacion;
 public class RegistroDestinoController {
 
     @FXML
-    private TextField tfDestino = new TextField();
+    private TextField tfDestino;
 
     @FXML
-    private Label lblEstado = new Label();
+    private Label lblEstado;
 
     @FXML
-    private ListView<Destino> listViewDestinos = new ListView<>();
+    private ListView<Destino> listViewDestinos;
 
     @FXML
     private void guardarDestino() {

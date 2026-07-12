@@ -11,10 +11,10 @@ import utils.ArchivoUtil;
 public class ConsultaDestinoController {
 
     @FXML
-    private Label lblEstado = new Label();
+    private Label lblEstado;
 
     @FXML
-    private ListView<Destino> listViewDestinos = new ListView<>();
+    private ListView<Destino> listViewDestinos;
 
     @FXML
     private void cargarDestinos() {
