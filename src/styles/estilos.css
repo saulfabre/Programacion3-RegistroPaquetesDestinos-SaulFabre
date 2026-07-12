@@ -75,3 +75,17 @@
 
     -fx-background-color: #ffb84d;
 }
+
+.contenedor-consulta-destinos {
+
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+}
+
+.label-destinos-registrados {
+
+    fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffb84d;
+}

@@ -1,6 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" />
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" stylesheets="@../styles/estilos.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ConsultaDestinoController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="618.0" spacing="8.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="39.0" prefWidth="520.0" spacing="18.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="64.0" prefWidth="64.0" styleClass="contenedor-imagen">
+                     <children>
+                        <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/map-svgrepo-com.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="50.0" prefWidth="309.0" spacing="4.0">
+                     <children>
+                        <Label alignment="CENTER" styleClass="titulo-principal" text="Consulta de Destinos" />
+                        <Label prefHeight="18.0" prefWidth="321.0" styleClass="sub-titulo" text="Carga los destinos registrados desde el archivo." />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </padding>
+            </HBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="142.0" prefWidth="520.0" spacing="10.0" styleClass="contenedor-consulta-destinos">
+               <children>
+                  <Label styleClass="label-destinos-registrados" text="Destinos registrados" />
+                  <ListView fx:id="listViewDestinos" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="130.0" prefWidth="520.0" styleClass="contenedor-list-view" />
+                  <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="50.0" prefWidth="520.0">
+                     <children>
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#guardarDestino" prefHeight="36.0" prefWidth="150.0" styleClass="btn-guardar" text="Cargar desde archivo" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </VBox>
+            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="38.0" prefWidth="520.0" styleClass="contenedor-estado">
+               <children>
+                  <Label fx:id="lblEstado" text="Esperando información..." />
+               </children>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="37.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="25.0" left="40.0" right="40.0" top="25.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
