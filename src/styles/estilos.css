@@ -1,0 +1,68 @@
+.titulo-principal {
+
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+}
+
+.sub-titulo {
+
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+}
+
+.contenedor-imagen {
+
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+}
+
+.contenedor-formulario {
+
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+}
+
+.btn-guardar {
+
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-background-color: #ffb84d;
+}
+
+.btn-cargar {
+
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+    -fx-border-color: #00000042;
+    -fx-border-radius: 4;
+    -fx-background-color: rgb(255, 255, 255);
+}
+
+.label-nombre-destino {
+
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.contenedor-estado {
+
+    -fx-background-color: white;
+    -fx-background-radius: 4;
+}
+
+.text-field-destino {
+
+    -fx-setPromptText: Tenares;
+}
+
+.contenedor-list-view {
+
+    -fx-border-color: #00000042;
+    -fx-border-radius: 4;
+    -fx-background-color: white;
+    -fx-background-radius: 4;
+    -fx-border-widht: 1;
+}
