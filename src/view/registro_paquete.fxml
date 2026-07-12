@@ -26,11 +26,6 @@
                   <MenuItem mnemonicParsing="false" onAction="#abrirConsultaDestinos" text="Consultar destinos" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
         </menus>
       </MenuBar>
    </top>

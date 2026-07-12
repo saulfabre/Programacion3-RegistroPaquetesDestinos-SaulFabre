@@ -18,6 +18,7 @@ public class Main extends Application{
         scene.getStylesheets().add(getClass().getResource("/styles/estilos.css").toExternalForm());
         
         primaryStage.setScene(scene);
+        primaryStage.setTitle("Registro de destinos");
         primaryStage.show();
         
     }
