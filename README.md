@@ -1,6 +1,6 @@
 # Registro de Paquetes y Destinos
 
-## ## Estudiante
+## Estudiante
 Saul Fabre Fernandez
 
 ## Matricula
