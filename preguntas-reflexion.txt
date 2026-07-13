@@ -1,0 +1,25 @@
+# Preguntas de reflexión
+
+## 1. ¿Cuál es la diferencia entre `Thread` y `Platform.runLater()`?
+Thread crea un hilo independiente para ejecutar codigo en segundo plano y Platform.runLater ejecuta codigo en el hilo principal de JavaFX, este se utiliza para actualizar la interfaz grafica.
+
+## 2. ¿Qué ocurre si se usa `Thread.sleep()` directamente dentro del evento de un botón?
+La interfaz se congela mientras termina la pausa, ya que bloquea el hilo principal de JavaFX.
+
+## 3. ¿Por qué no se debe actualizar un `Label` directamente desde un hilo secundario?
+Porque los nodos de JavaFX solo pueden modificarse desde el hilo principal de JavaFX, si se actualiza desde otro hilo puede haber excepciones.
+
+## 4. ¿Para qué sirve `BufferedReader`?
+Para leer texto de un archivo, este es mas eficiente y permite leer linea por linea.
+
+## 5. ¿Para qué sirve `FileWriter`?
+Para escribir texto en un archivo, se puede crear uno nuevo o sobreescribir o agregar en uno que ya existe.
+
+## 6. ¿Por qué es importante guardar la información en archivos?
+Porque permite que los datos queden almacenados despues de cerrar el programa, esto evita que se pierda la informacion y se pueda seguir reutilizando.
+
+## 7. ¿Qué ventaja tiene usar `ComboBox` para seleccionar destinos?
+Permite elegir una opcion de varias opciones predefinidas en una lista, lo que evita que se elijan opciones que no existen, y es mas rapido.
+
+## 8. ¿Qué ventaja tiene usar `TableView` para consultar paquetes?
+Muestra varios registros en filas y columnas, es mas facil de visualizar, y consultar informacion de los paquetes.
